@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 75%;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body{
+    background-image: linear-gradient(
+  0deg,
+  hsl(240deg 73% 65%) 0%,
+  hsl(240deg 73% 65%) 11%,
+  hsl(240deg 73% 65%) 22%,
+  hsl(240deg 73% 65%) 33%,
+  hsl(240deg 73% 65%) 44%,
+  hsl(240deg 73% 65%) 56%,
+  hsl(240deg 73% 65%) 67%,
+  hsl(240deg 73% 65%) 78%,
+  hsl(240deg 73% 65%) 89%,
+  hsl(240deg 73% 65%) 100%
+);
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    height: 40rem;
+    width: 68rem;
+    border-radius: 2rem;
+    display: flex;
+    position: relative;
+    background-color: white;
+}
+
+.illustration{
+    flex: 1;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -12rem;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.image{
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    transform: scale(1.1);
+    left: -4rem;
+    bottom: 20%;
+}
+
+.boxImage{
+    position: absolute;
+    left: -9rem;
+    bottom: 20%;
+}
+
+h1{
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+
+.content{
+    flex: 1;
+    padding: 3rem 5rem 3rem 2rem;
+    overflow: auto;
+}
+
+.accordion{
+    font-size: 1rem;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding-bottom: 1rem;
+    padding-right:1rem;
+}
+
+.accordionQuestion{
+    display: flex;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    color: hsl(237, 12%, 33%);
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.accordionQuestion:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+
+.arrow{
+    height: 0.5rem;
+    width:  0.8rem;
+    transition: all 0.4s ease;
+}
+
+.accordionAnswer{
+    display: none;
+    transition: 0.2s ease all;
+    padding-block: 0.7rem;
+    transition: all 0.4s ease;
+    padding-right: 0.5rem;
+    color:  hsl(240, 6%, 50%);
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+        width: 375px;
+        height: 70vh;
+        margin-inline: 3rem;
+    }
+
+    .image{
+        display: none;
+        transform: scale(1);
+        height: 100px;
+        width: 100px;
+        bottom: 0;
+        left: 0;
+    }
+
+    .illustration{
+        transform: scale(2);
+        background-size: contain;
+        background-position-x: 6.5rem;
+        background-position-y: -2rem;
+    }
+
+    .boxImage{
+        display: none;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .content{
+        padding: 4rem 2rem;
+        flex: 3;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container{
+        margin-inline: 5rem;
+    }
+}
+
